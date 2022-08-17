@@ -64,11 +64,11 @@ function EditProduct(){
         setForm({
           ...form,
           [e.target.name]:
-            e.target.type === 'file' ? e.target.files : e.target.value,
+            e.target.type === "file" ? e.target.files : e.target.value,
         });
     
         // Create image url for preview
-        if (e.target.type === 'file') {
+        if (e.target.type === "file") {
           let url = URL.createObjectURL(e.target.files[0]);
           setPreview(url);
         }
@@ -117,6 +117,8 @@ function EditProduct(){
       
           setCategoryId(newCategoryId);
     }, [product])
+
+    console.log(preview);
     return(
         <div style={{backgroundColor:"black", height:"100%"}}>
         
