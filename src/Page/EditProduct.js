@@ -10,9 +10,6 @@ import { Container } from "react-bootstrap"
 function EditProduct(){
     const navigate = useNavigate();
     const { id } = useParams();
-    // function gotoProduct(){
-    //     navigate("/product")
-    // }
     
     const [category, setCategory] = useState([]);
     const [categoryId, setCategoryId] = useState([]);
@@ -38,6 +35,7 @@ function EditProduct(){
         });
         setProduct(response.data.data);
     });
+    console.log(product);
 
     useQuery("categoryCache", async () => {
         const response = await API.get("/category");
