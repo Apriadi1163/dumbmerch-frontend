@@ -22,6 +22,7 @@ function EditProduct(){
         price: "",
         qty: "",
     });
+    console.log(preview)
 
     useQuery("productCache", async() => {
         const response = await API.get("/product/" + id)
