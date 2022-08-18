@@ -35,7 +35,7 @@ function EditProduct(){
         });
         setProduct(response.data.data);
     });
-    console.log(product);
+    // console.log(product);
 
     useQuery("categoryCache", async () => {
         const response = await API.get("/category");
@@ -118,7 +118,7 @@ function EditProduct(){
 
     console.log(preview);
     return(
-        <div style={{backgroundColor:"black", height:"100%"}}>
+        <div>
         
             <NavbarAdmin />
             <div>
