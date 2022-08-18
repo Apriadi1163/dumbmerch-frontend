@@ -35,7 +35,6 @@ function EditProduct(){
         });
         setProduct(response.data.data);
     });
-    // console.log(product);
 
     useQuery("categoryCache", async () => {
         const response = await API.get("/category");
@@ -108,6 +107,8 @@ function EditProduct(){
         }
     });
 
+    console.log(preview);
+
     useEffect(() => {
         const newCategoryId = product?.category?.map((item) => {
             return item.id;
@@ -115,10 +116,8 @@ function EditProduct(){
       
           setCategoryId(newCategoryId);
     }, [product])
-
-    console.log(preview);
     return(
-        <div>
+        <div style={{backgroundColor:"black", height:"100%"}}>
         
             <NavbarAdmin />
             <div>
