@@ -116,12 +116,12 @@ function EditProduct(){
     useEffect(() => {
         const newCategoryId = product?.category?.map((item) => {
             return item.id;
-          });
+        });
       
           setCategoryId(newCategoryId);
     }, [product])
     return(
-        <div style={{backgroundColor:"black", height:"100%"}}>
+        <div >
         
             <NavbarAdmin />
             <div>

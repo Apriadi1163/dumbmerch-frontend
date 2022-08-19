@@ -26,7 +26,7 @@ export default function ComplainAdmin() {
   const [state] = useContext(UserContext);
 
   useEffect(() => {
-    socket = io("http://localhost:5000", {
+    socket = io("https://server-dumbmerch.herokuapp.com/", {
       auth: {
         token: localStorage.getItem("token"),
       },
