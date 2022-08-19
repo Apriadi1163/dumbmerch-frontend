@@ -35,6 +35,7 @@ function EditProduct(){
             price: response.data.data.price,
             qty: response.data.data.qty,
         });
+        console.log(response.data)
         setProduct(response.data.data);
     });
 
