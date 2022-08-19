@@ -23,6 +23,7 @@ function EditProduct(){
         qty: "",
     });
     console.log(preview)
+    console.log(setProduct)
     console.log(product)
 
     useQuery("productCache", async() => {
