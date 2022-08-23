@@ -24,7 +24,7 @@ function Homepage(){
                         {product?.map((data, index) => (
                         <Col md={3} key={index} >
                         <Link  to={`/detailproduct/` + data.id} style={{ textDecoration: "none", color:"white" }}>
-                        <Card style={{ width: '23rem', textDecoration: 'none'}} className="bg-black me-2" key={index}>
+                        <Card style={{ width: '23rem', textDecoration: 'none'}} key={index}>
                             <Card.Img variant="top" src={data.image} className="img-fluid " style={{ width: '250px', height: '300px' }} />
                             <Card.Body>
                                 <Card.Title className={CssHomepage.name}>{data.name}</Card.Title>
