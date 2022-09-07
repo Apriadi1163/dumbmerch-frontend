@@ -40,6 +40,39 @@ function Register(){
             console.log(response)
 
             //Notification
+            if (response.status == 200){
+                const alert = (
+                    <div className='alert alert-success py-2 fw-bold' role='alert' style={{width:"500px", height:"40px"}} >
+                        Register Success
+                    </div>
+                )
+
+                setMessage(alert)
+                setForm({
+                    name: "",
+                    email: "",
+                    password: "",
+                })
+            } else if(response.data.status == "fail"){
+                const alert = (
+                    <div className='alert alert-danger py-2 fw-bold' role='alert'>
+                        Email telah ada
+                    </div>
+                )
+                setMessage(alert)
+                setForm({
+                    name: "",
+                    email: "",
+                    password: "",
+                })
+            }else {
+                const alert = (
+                    <div className='alert alert-dark py-2 fw-bold' role='alert'>
+                        {response.message} 
+                    </div>
+                )
+            setMessage(alert)
+            }
         }catch(error){
             // console.log(error)
         }
