@@ -86,7 +86,7 @@ function Category(){
                       <td width="10%" className="align-middle">{index + 1}</td>
                       <td width="60%" className="align-middle">{data.name}</td>
                       <td width="30%">
-                        <Button variant="success" className='me-4' onClick={() => {gotoEditCategory(data.id)}} style={{width: "135px"}} >  Edit  </Button>{' '}
+                        {/* <Button variant="success" className='me-4' onClick={() => {gotoEditCategory(data.id)}} style={{width: "135px"}} >  Edit  </Button>{' '} */}
                         <Button className='btn-category' variant="danger" onClick={() => {handleDelete(data.id)}} style={{width: "135px"}}>Delete</Button>
                         
                       </td>

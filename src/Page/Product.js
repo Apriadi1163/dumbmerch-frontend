@@ -134,7 +134,7 @@ function Product(){
                       <td>{val.price}</td>
                       <td>{val.qty}</td>
                       <td>
-                        <Button variant="success" className='me-4' onClick={() => {gotoEdit(val.id)}} style={{width: "135px"}} >  Edit  </Button>{' '}
+                        {/* <Button variant="success" className='me-4' onClick={() => {gotoEdit(val.id)}} style={{width: "135px"}} >  Edit  </Button>{' '} */}
                         <Button variant="danger" onClick={() => {handleDelete(val.id)}} style={{width: "135px"}}>Delete</Button>
                         
                         
