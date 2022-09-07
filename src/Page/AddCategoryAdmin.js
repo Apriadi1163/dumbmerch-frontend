@@ -50,7 +50,7 @@ function AddCategoryAdmin(){
                             value={category}
                             onChange={handleChange}
                             className="edit-place"
-                            style={{marginLeft:"2em", width:"80.5em", paddingLeft: "1.5em", height:"2em"}}
+                            style={{marginLeft:"2em", width:"80.5em", paddingLeft: "1.5em", height:"2.5em"}}
                         />
                     </div>
 
