@@ -5,6 +5,7 @@ import { API } from "../config/api"
 import CssRegister from "./Register.module.css"
 
 function Register(){
+    const [message, setMessage] = useState(null);
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -74,7 +75,7 @@ function Register(){
             setMessage(alert)
             }
         }catch(error){
-            // console.log(error)
+            console.log(error)
         }
         
 
@@ -87,6 +88,7 @@ function Register(){
                 <Col md="6">
                     <Form onSubmit={(e) => handleSubmit.mutate(e)} >
                         <div className={CssRegister.info}>Register</div>
+                        {message && message}
                         <Form.Group className={CssRegister.form}>
                             <Form.Control 
                                 onChange={handleChange}
